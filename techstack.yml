@@ -1,0 +1,292 @@
+repo_name: 2lambda123/graphene-tornado
+report_id: 1f108df4c906c8e5d0d916c15403f922
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-09T07:00:11+00:00'
+requested_by: erikwrede
+provider: github
+branch: master
+detected_tools_count: 22
+tools:
+- name: Jinja
+  description: Full featured template engine for Python
+  website_url: https://palletsprojects.com/p/jinja/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Templating Languages & Extensions
+  image_url: https://img.stackshare.io/service/2303/New_Project__20_.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Bruno P. Kinoshita
+  last_updated_on: 2019-04-29 23:06:35.000000000 Z
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado
+  detection_source: Repo Metadata
+- name: Protobuf
+  description: Google's data interchange format
+  website_url: https://developers.google.com/protocol-buffers/
+  version: 3.7.1
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Serialization Frameworks
+  image_url: https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2019-09-23 18:22:54.000000000 Z
+- name: Tornado
+  description: A Python web framework and asynchronous networking library, originally
+    developed at FriendFeed
+  website_url: http://www.tornadoweb.org/
+  version: 6.1.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1002/tornado.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: setup.py
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
+- name: Coveralls
+  description: Track your project's code coverage over time, changes to files, and
+    badge your GitHub repo
+  website_url: https://coveralls.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Code Coverage
+  image_url: https://img.stackshare.io/service/680/a43e4a04cb9f778842de43f95db59a14.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2018-11-10 22:22:43.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/.github/workflows/deploy.yml
+  detection_source: ".github/workflows/deploy.yml"
+  last_updated_by: Erik Wrede
+  last_updated_on: 2022-11-27 22:00:42.000000000 Z
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/setup.py
+  detection_source: setup.py
+  last_updated_by: Eric Hauser
+  last_updated_on: 2017-09-20 00:57:52.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/.travis.yml
+  detection_source: ".travis.yml"
+  last_updated_by: Eric Hauser
+  last_updated_on: 2019-04-29 23:05:50.000000000 Z
+- name: pre-commit
+  description: A slightly improved pre-commit hook for git
+  website_url: http://jish.github.io/pre-commit/
+  version: 2.2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Git Tools
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2020-04-12 16:37:11.000000000 Z
+- name: pytest
+  description: A full-featured Python testing tool to help you write better programs
+  website_url: http://pytest.org/latest/
+  version: 4.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/4586/Lu99Qe0Z_400x400.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
+- name: Werkzeug
+  website_url: https://palletsprojects.com/p/werkzeug/
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/11076/iwoLyNPI_normal.jpg
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/setup.py
+  detection_source: setup.py
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
+- name: mypy
+  description: Developers of mypy, a Python variant with seamless dynamic and static
+    typing
+  website_url: http://mypy-lang.org/
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/7350/eaca159133a3901e24ddb407d1235c25_normal.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2020-04-12 04:07:58.000000000 Z
+- name: black
+  description: The uncompromising code formatter
+  package_url: https://pypi.org/project/black
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20099/default_029b9bbfb6be2cd34bebeda5b8e1e80a1d22441c.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2020-04-12 16:37:11.000000000 Z
+- name: graphene
+  description: GraphQL Framework for Python
+  package_url: https://pypi.org/project/graphene
+  version: '3.0'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20293/default_fbb28b4e332d257da7e7f1277d3ce073b5270511.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
+- name: mock
+  description: Rolling backport of unittest.mock for all Pythons
+  package_url: https://pypi.org/project/mock
+  version: 2.0.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19876/default_8902c10687fbcd6273bdbe119fff40fa1180763f.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2018-11-10 21:55:03.000000000 Z
+- name: mypy
+  description: Optional static typing for Python
+  package_url: https://pypi.org/project/mypy
+  version: '0.770'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20219/default_d4dd0466552a9776ca8535b869e22a3362790c94.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2020-04-12 04:07:58.000000000 Z
+- name: opencensus
+  description: A stats collection and distributed tracing framework
+  package_url: https://pypi.org/project/opencensus
+  version: 0.7.7
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20349/default_af2b356cd035e5e1c010a45df43c17b898af8c44.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2020-02-16 01:13:11.000000000 Z
+- name: pytest-cov
+  description: Pytest plugin for measuring coverage
+  package_url: https://pypi.org/project/pytest-cov
+  version: 2.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19958/default_e91a78767854f0fa80aab2f13d1a25b15ca2d278.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements-test.txt
+  detection_source: requirements-test.txt
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
+- name: six
+  description: Python 2 and 3 compatibility utilities
+  package_url: https://pypi.org/project/six
+  version: 1.10.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19827/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2018-11-10 21:55:03.000000000 Z
+- name: tox
+  description: Tox is a generic virtualenv management and test command line tool
+  package_url: https://pypi.org/project/tox
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19991/default_f2178576c59f6927768590a32b6ef092891768c5.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Eric Hauser
+  last_updated_on: 2018-11-10 21:55:03.000000000 Z
+- name: typing-extensions
+  description: Backported and Experimental Type Hints for Python 3.5+
+  package_url: https://pypi.org/project/typing-extensions
+  license: Python-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19875/default_2270bfab784e3d2c2d999d26b11ee478a9dad238.png
+  detection_source_url: https://github.com/2lambda123/graphene-tornado/blob/master/setup.py
+  detection_source: setup.py
+  last_updated_by: Srikanth
+  last_updated_on: 2022-09-27 09:55:41.000000000 Z
