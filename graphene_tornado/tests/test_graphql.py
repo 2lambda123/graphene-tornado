@@ -153,7 +153,9 @@ def test_errors_when_selecting_a_mutation_within_a_get(http_helper):
     assert context.value.code == 405
     assert response_json(context.value.response) == {
         "errors": [
-            {"message": "Can only perform a mutation operation from a POST request.",}
+            {
+                "message": "Can only perform a mutation operation from a POST request.",
+            }
         ],
     }
 
@@ -191,7 +193,11 @@ def test_batch_allows_post_with_json_encoding(http_helper):
 
     assert response.code == 200
     assert response_json(response) == [
-        {"id": 1, "data": {"test": "Hello World"}, "status": 200,}
+        {
+            "id": 1,
+            "data": {"test": "Hello World"},
+            "status": 200,
+        }
     ]
 
 
@@ -257,7 +263,11 @@ def test_batch_supports_post_json_query_with_string_variables(http_helper):
 
     assert response.code == 200
     assert response_json(response) == [
-        {"id": 1, "data": {"test": "Hello Dolly"}, "status": 200,}
+        {
+            "id": 1,
+            "data": {"test": "Hello Dolly"},
+            "status": 200,
+        }
     ]
 
 
@@ -290,7 +300,11 @@ def test_batch_supports_post_json_query_with_json_variables(http_helper):
 
     assert response.code == 200
     assert response_json(response) == [
-        {"id": 1, "data": {"test": "Hello Dolly"}, "status": 200,}
+        {
+            "id": 1,
+            "data": {"test": "Hello Dolly"},
+            "status": 200,
+        }
     ]
 
 
@@ -315,7 +329,9 @@ def test_supports_post_url_encoded_query_with_string_variables(http_helper):
 def test_supports_post_json_quey_with_get_variable_values(http_helper):
     response = yield http_helper.post_json(
         url_string(variables=json.dumps({"who": "Dolly"})),
-        dict(query="query helloWho($who: String){ test(who: $who) }",),
+        dict(
+            query="query helloWho($who: String){ test(who: $who) }",
+        ),
     )
 
     assert response.code == 200
@@ -326,7 +342,11 @@ def test_supports_post_json_quey_with_get_variable_values(http_helper):
 def test_post_url_encoded_query_with_get_variable_values(http_helper):
     response = yield http_helper.post_body(
         url_string(variables=json.dumps({"who": "Dolly"})),
-        body=urlencode(dict(query="query helloWho($who: String){ test(who: $who) }",)),
+        body=urlencode(
+            dict(
+                query="query helloWho($who: String){ test(who: $who) }",
+            )
+        ),
         headers=FORM_HEADER,
     )
 
@@ -460,9 +480,9 @@ def test_handles_field_errors_caught_by_graphql(http_helper):
         "data": None,
         "errors": [
             {
-                u"path": [u"thrower"],
-                u"message": u"Throws!",
-                u"locations": [{u"column": 2, u"line": 1}],
+                "path": ["thrower"],
+                "message": "Throws!",
+                "locations": [{"column": 2, "line": 1}],
             }
         ],
     }

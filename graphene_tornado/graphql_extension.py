@@ -4,6 +4,7 @@ by Apollo Server: https://github.com/apollographql/apollo-server/tree/master/pac
 
 Extensions are also middleware but have additional hooks.
 """
+
 from __future__ import absolute_import
 from __future__ import print_function
 
@@ -65,7 +66,11 @@ class GraphQLExtension:
         pass
 
     @abstractmethod
-    def will_send_response(self, response: Any, context: Any,) -> EndHandler:
+    def will_send_response(
+        self,
+        response: Any,
+        context: Any,
+    ) -> EndHandler:
         pass
 
     def as_middleware(self) -> Callable:

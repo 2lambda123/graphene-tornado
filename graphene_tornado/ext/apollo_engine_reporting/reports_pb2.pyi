@@ -44,6 +44,7 @@ class Trace(google___protobuf___message___Message):
             def items(
                 cls,
             ) -> typing___List[typing___Tuple[str, Trace.CachePolicy.Scope]]: ...
+
         UNKNOWN = typing___cast(Scope, 0)
         PUBLIC = typing___cast(Scope, 1)
         PRIVATE = typing___cast(Scope, 2)
@@ -65,12 +66,13 @@ class Trace(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"max_age_ns", u"scope"]
+                self, field_name: typing_extensions___Literal["max_age_ns", "scope"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"max_age_ns", b"scope"]
             ) -> None: ...
+
     class Details(google___protobuf___message___Message):
         class VariablesJsonEntry(google___protobuf___message___Message):
             key = ...  # type: typing___Text
@@ -90,12 +92,13 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"key", u"value"]
+                    self, field_name: typing_extensions___Literal["key", "value"]
                 ) -> None: ...
             else:
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"key", b"value"]
                 ) -> None: ...
+
         class VariablesEntry(google___protobuf___message___Message):
             key = ...  # type: typing___Text
             value = ...  # type: bytes
@@ -114,12 +117,13 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"key", u"value"]
+                    self, field_name: typing_extensions___Literal["key", "value"]
                 ) -> None: ...
             else:
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"key", b"value"]
                 ) -> None: ...
+
         raw_query = ...  # type: typing___Text
         operation_name = ...  # type: typing___Text
         @property
@@ -149,7 +153,7 @@ class Trace(google___protobuf___message___Message):
             def ClearField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"operation_name", u"raw_query", u"variables", u"variables_json"
+                    "operation_name", "raw_query", "variables", "variables_json"
                 ],
             ) -> None: ...
         else:
@@ -159,6 +163,7 @@ class Trace(google___protobuf___message___Message):
                     b"operation_name", b"raw_query", b"variables", b"variables_json"
                 ],
             ) -> None: ...
+
     class Error(google___protobuf___message___Message):
         message = ...  # type: typing___Text
         time_ns = ...  # type: int
@@ -188,7 +193,7 @@ class Trace(google___protobuf___message___Message):
             def ClearField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"json", u"location", u"message", u"time_ns"
+                    "json", "location", "message", "time_ns"
                 ],
             ) -> None: ...
         else:
@@ -198,6 +203,7 @@ class Trace(google___protobuf___message___Message):
                     b"json", b"location", b"message", b"time_ns"
                 ],
             ) -> None: ...
+
     class HTTP(google___protobuf___message___Message):
         class Method(int):
             DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
@@ -211,6 +217,7 @@ class Trace(google___protobuf___message___Message):
             def values(cls) -> typing___List[Trace.HTTP.Method]: ...
             @classmethod
             def items(cls) -> typing___List[typing___Tuple[str, Trace.HTTP.Method]]: ...
+
         UNKNOWN = typing___cast(Method, 0)
         OPTIONS = typing___cast(Method, 1)
         GET = typing___cast(Method, 2)
@@ -221,12 +228,14 @@ class Trace(google___protobuf___message___Message):
         TRACE = typing___cast(Method, 7)
         CONNECT = typing___cast(Method, 8)
         PATCH = typing___cast(Method, 9)
+
         class Values(google___protobuf___message___Message):
             value = (
                 ...
             )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[typing___Text]
             def __init__(
-                self, value: typing___Optional[typing___Iterable[typing___Text]] = None,
+                self,
+                value: typing___Optional[typing___Iterable[typing___Text]] = None,
             ) -> None: ...
             @classmethod
             def FromString(cls, s: bytes) -> Trace.HTTP.Values: ...
@@ -238,12 +247,13 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"value"]
+                    self, field_name: typing_extensions___Literal["value"]
                 ) -> None: ...
             else:
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"value"]
                 ) -> None: ...
+
         class RequestHeadersEntry(google___protobuf___message___Message):
             key = ...  # type: typing___Text
             @property
@@ -263,18 +273,19 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"value"]
+                    self, field_name: typing_extensions___Literal["value"]
                 ) -> bool: ...
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"key", u"value"]
+                    self, field_name: typing_extensions___Literal["key", "value"]
                 ) -> None: ...
             else:
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"value", b"value"]
+                    self, field_name: typing_extensions___Literal["value", b"value"]
                 ) -> bool: ...
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"key", b"value"]
                 ) -> None: ...
+
         class ResponseHeadersEntry(google___protobuf___message___Message):
             key = ...  # type: typing___Text
             @property
@@ -294,18 +305,19 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"value"]
+                    self, field_name: typing_extensions___Literal["value"]
                 ) -> bool: ...
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"key", u"value"]
+                    self, field_name: typing_extensions___Literal["key", "value"]
                 ) -> None: ...
             else:
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"value", b"value"]
+                    self, field_name: typing_extensions___Literal["value", b"value"]
                 ) -> bool: ...
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"key", b"value"]
                 ) -> None: ...
+
         method = ...  # type: Trace.HTTP.Method
         host = ...  # type: typing___Text
         path = ...  # type: typing___Text
@@ -347,14 +359,14 @@ class Trace(google___protobuf___message___Message):
             def ClearField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"host",
-                    u"method",
-                    u"path",
-                    u"protocol",
-                    u"request_headers",
-                    u"response_headers",
-                    u"secure",
-                    u"status_code",
+                    "host",
+                    "method",
+                    "path",
+                    "protocol",
+                    "request_headers",
+                    "response_headers",
+                    "secure",
+                    "status_code",
                 ],
             ) -> None: ...
         else:
@@ -371,6 +383,7 @@ class Trace(google___protobuf___message___Message):
                     b"status_code",
                 ],
             ) -> None: ...
+
     class Location(google___protobuf___message___Message):
         line = ...  # type: int
         column = ...  # type: int
@@ -389,12 +402,13 @@ class Trace(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"column", u"line"]
+                self, field_name: typing_extensions___Literal["column", "line"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"column", b"line"]
             ) -> None: ...
+
     class Node(google___protobuf___message___Message):
         response_name = ...  # type: typing___Text
         index = ...  # type: int
@@ -442,36 +456,36 @@ class Trace(google___protobuf___message___Message):
             def HasField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"cache_policy", u"id", u"index", u"response_name"
+                    "cache_policy", "id", "index", "response_name"
                 ],
             ) -> bool: ...
             def ClearField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"cache_policy",
-                    u"child",
-                    u"end_time",
-                    u"error",
-                    u"id",
-                    u"index",
-                    u"original_field_name",
-                    u"parent_type",
-                    u"response_name",
-                    u"start_time",
-                    u"type",
+                    "cache_policy",
+                    "child",
+                    "end_time",
+                    "error",
+                    "id",
+                    "index",
+                    "original_field_name",
+                    "parent_type",
+                    "response_name",
+                    "start_time",
+                    "type",
                 ],
             ) -> None: ...
         else:
             def HasField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"cache_policy",
+                    "cache_policy",
                     b"cache_policy",
-                    u"id",
+                    "id",
                     b"id",
-                    u"index",
+                    "index",
                     b"index",
-                    u"response_name",
+                    "response_name",
                     b"response_name",
                 ],
             ) -> bool: ...
@@ -491,9 +505,11 @@ class Trace(google___protobuf___message___Message):
                     b"type",
                 ],
             ) -> None: ...
+
         def WhichOneof(
-            self, oneof_group: typing_extensions___Literal[u"id", b"id"]
+            self, oneof_group: typing_extensions___Literal["id", b"id"]
         ) -> typing_extensions___Literal["response_name", "index"]: ...
+
     class QueryPlanNode(google___protobuf___message___Message):
         class SequenceNode(google___protobuf___message___Message):
             @property
@@ -516,12 +532,13 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"nodes"]
+                    self, field_name: typing_extensions___Literal["nodes"]
                 ) -> None: ...
             else:
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"nodes"]
                 ) -> None: ...
+
         class ParallelNode(google___protobuf___message___Message):
             @property
             def nodes(
@@ -543,12 +560,13 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def ClearField(
-                    self, field_name: typing_extensions___Literal[u"nodes"]
+                    self, field_name: typing_extensions___Literal["nodes"]
                 ) -> None: ...
             else:
                 def ClearField(
                     self, field_name: typing_extensions___Literal[b"nodes"]
                 ) -> None: ...
+
         class FetchNode(google___protobuf___message___Message):
             serviceName = ...  # type: typing___Text
             traceParsingFailed = ...  # type: bool
@@ -586,29 +604,29 @@ class Trace(google___protobuf___message___Message):
                 def HasField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"received_time", u"sent_time", u"trace"
+                        "received_time", "sent_time", "trace"
                     ],
                 ) -> bool: ...
                 def ClearField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"received_time",
-                        u"sent_time",
-                        u"sent_time_offset",
-                        u"serviceName",
-                        u"trace",
-                        u"traceParsingFailed",
+                        "received_time",
+                        "sent_time",
+                        "sent_time_offset",
+                        "serviceName",
+                        "trace",
+                        "traceParsingFailed",
                     ],
                 ) -> None: ...
             else:
                 def HasField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"received_time",
+                        "received_time",
                         b"received_time",
-                        u"sent_time",
+                        "sent_time",
                         b"sent_time",
-                        u"trace",
+                        "trace",
                         b"trace",
                     ],
                 ) -> bool: ...
@@ -623,6 +641,7 @@ class Trace(google___protobuf___message___Message):
                         b"traceParsingFailed",
                     ],
                 ) -> None: ...
+
         class FlattenNode(google___protobuf___message___Message):
             @property
             def response_path(
@@ -649,20 +668,21 @@ class Trace(google___protobuf___message___Message):
             ) -> None: ...
             if sys.version_info >= (3,):
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"node"]
+                    self, field_name: typing_extensions___Literal["node"]
                 ) -> bool: ...
                 def ClearField(
                     self,
-                    field_name: typing_extensions___Literal[u"node", u"response_path"],
+                    field_name: typing_extensions___Literal["node", "response_path"],
                 ) -> None: ...
             else:
                 def HasField(
-                    self, field_name: typing_extensions___Literal[u"node", b"node"]
+                    self, field_name: typing_extensions___Literal["node", b"node"]
                 ) -> bool: ...
                 def ClearField(
                     self,
                     field_name: typing_extensions___Literal[b"node", b"response_path"],
                 ) -> None: ...
+
         class ResponsePathElement(google___protobuf___message___Message):
             field_name = ...  # type: typing___Text
             index = ...  # type: int
@@ -685,20 +705,20 @@ class Trace(google___protobuf___message___Message):
                 def HasField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"field_name", u"id", u"index"
+                        "field_name", "id", "index"
                     ],
                 ) -> bool: ...
                 def ClearField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"field_name", u"id", u"index"
+                        "field_name", "id", "index"
                     ],
                 ) -> None: ...
             else:
                 def HasField(
                     self,
                     field_name: typing_extensions___Literal[
-                        u"field_name", b"field_name", u"id", b"id", u"index", b"index"
+                        "field_name", b"field_name", "id", b"id", "index", b"index"
                     ],
                 ) -> bool: ...
                 def ClearField(
@@ -707,9 +727,11 @@ class Trace(google___protobuf___message___Message):
                         b"field_name", b"id", b"index"
                     ],
                 ) -> None: ...
+
             def WhichOneof(
-                self, oneof_group: typing_extensions___Literal[u"id", b"id"]
+                self, oneof_group: typing_extensions___Literal["id", b"id"]
             ) -> typing_extensions___Literal["field_name", "index"]: ...
+
         @property
         def sequence(self) -> Trace.QueryPlanNode.SequenceNode: ...
         @property
@@ -737,28 +759,28 @@ class Trace(google___protobuf___message___Message):
             def HasField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"fetch", u"flatten", u"node", u"parallel", u"sequence"
+                    "fetch", "flatten", "node", "parallel", "sequence"
                 ],
             ) -> bool: ...
             def ClearField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"fetch", u"flatten", u"node", u"parallel", u"sequence"
+                    "fetch", "flatten", "node", "parallel", "sequence"
                 ],
             ) -> None: ...
         else:
             def HasField(
                 self,
                 field_name: typing_extensions___Literal[
-                    u"fetch",
+                    "fetch",
                     b"fetch",
-                    u"flatten",
+                    "flatten",
                     b"flatten",
-                    u"node",
+                    "node",
                     b"node",
-                    u"parallel",
+                    "parallel",
                     b"parallel",
-                    u"sequence",
+                    "sequence",
                     b"sequence",
                 ],
             ) -> bool: ...
@@ -768,11 +790,13 @@ class Trace(google___protobuf___message___Message):
                     b"fetch", b"flatten", b"node", b"parallel", b"sequence"
                 ],
             ) -> None: ...
+
         def WhichOneof(
-            self, oneof_group: typing_extensions___Literal[u"node", b"node"]
+            self, oneof_group: typing_extensions___Literal["node", b"node"]
         ) -> typing_extensions___Literal[
             "sequence", "parallel", "fetch", "flatten"
         ]: ...
+
     duration_ns = ...  # type: int
     signature = ...  # type: typing___Text
     client_name = ...  # type: typing___Text
@@ -849,65 +873,65 @@ class Trace(google___protobuf___message___Message):
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"cache_policy",
-                u"details",
-                u"end_time",
-                u"http",
-                u"origin_reported_end_time",
-                u"origin_reported_start_time",
-                u"query_plan",
-                u"root",
-                u"start_time",
+                "cache_policy",
+                "details",
+                "end_time",
+                "http",
+                "origin_reported_end_time",
+                "origin_reported_start_time",
+                "query_plan",
+                "root",
+                "start_time",
             ],
         ) -> bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"cache_policy",
-                u"client_address",
-                u"client_name",
-                u"client_reference_id",
-                u"client_version",
-                u"details",
-                u"duration_ns",
-                u"end_time",
-                u"forbidden_operation",
-                u"full_query_cache_hit",
-                u"http",
-                u"legacy_signature_needs_resigning",
-                u"origin_reported_duration_ns",
-                u"origin_reported_end_time",
-                u"origin_reported_start_time",
-                u"persisted_query_hit",
-                u"persisted_query_register",
-                u"query_plan",
-                u"registered_operation",
-                u"root",
-                u"signature",
-                u"start_time",
+                "cache_policy",
+                "client_address",
+                "client_name",
+                "client_reference_id",
+                "client_version",
+                "details",
+                "duration_ns",
+                "end_time",
+                "forbidden_operation",
+                "full_query_cache_hit",
+                "http",
+                "legacy_signature_needs_resigning",
+                "origin_reported_duration_ns",
+                "origin_reported_end_time",
+                "origin_reported_start_time",
+                "persisted_query_hit",
+                "persisted_query_register",
+                "query_plan",
+                "registered_operation",
+                "root",
+                "signature",
+                "start_time",
             ],
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"cache_policy",
+                "cache_policy",
                 b"cache_policy",
-                u"details",
+                "details",
                 b"details",
-                u"end_time",
+                "end_time",
                 b"end_time",
-                u"http",
+                "http",
                 b"http",
-                u"origin_reported_end_time",
+                "origin_reported_end_time",
                 b"origin_reported_end_time",
-                u"origin_reported_start_time",
+                "origin_reported_start_time",
                 b"origin_reported_start_time",
-                u"query_plan",
+                "query_plan",
                 b"query_plan",
-                u"root",
+                "root",
                 b"root",
-                u"start_time",
+                "start_time",
                 b"start_time",
             ],
         ) -> bool: ...
@@ -967,14 +991,14 @@ class ReportHeader(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"agent_version",
-                u"hostname",
-                u"runtime_version",
-                u"schema_hash",
-                u"schema_tag",
-                u"service",
-                u"service_version",
-                u"uname",
+                "agent_version",
+                "hostname",
+                "runtime_version",
+                "schema_hash",
+                "schema_tag",
+                "service",
+                "service_version",
+                "uname",
             ],
         ) -> None: ...
     else:
@@ -1012,18 +1036,19 @@ class PathErrorStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     errors_count = ...  # type: int
     requests_with_errors_count = ...  # type: int
     @property
@@ -1044,7 +1069,7 @@ class PathErrorStats(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"children", u"errors_count", u"requests_with_errors_count"
+                "children", "errors_count", "requests_with_errors_count"
             ],
         ) -> None: ...
     else:
@@ -1076,12 +1101,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class CacheHitsPerVersionEntry(google___protobuf___message___Message):
         key = ...  # type: typing___Text
         value = ...  # type: int
@@ -1100,12 +1126,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class PersistedQueryHitsPerVersionEntry(google___protobuf___message___Message):
         key = ...  # type: typing___Text
         value = ...  # type: int
@@ -1126,12 +1153,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class PersistedQueryMissesPerVersionEntry(google___protobuf___message___Message):
         key = ...  # type: typing___Text
         value = ...  # type: int
@@ -1152,12 +1180,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class RegisteredOperationCountPerVersionEntry(
         google___protobuf___message___Message
     ):
@@ -1180,12 +1209,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class ForbiddenOperationCountPerVersionEntry(google___protobuf___message___Message):
         key = ...  # type: typing___Text
         value = ...  # type: int
@@ -1206,12 +1236,13 @@ class ClientNameStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     latency_count = (
         ...
     )  # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[int]
@@ -1282,30 +1313,30 @@ class ClientNameStats(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"root_error_stats"]
+            self, field_name: typing_extensions___Literal["root_error_stats"]
         ) -> bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"cache_hits_per_version",
-                u"cache_latency_count",
-                u"forbidden_operation_count_per_version",
-                u"latency_count",
-                u"persisted_query_hits_per_version",
-                u"persisted_query_misses_per_version",
-                u"private_cache_ttl_count",
-                u"public_cache_ttl_count",
-                u"registered_operation_count_per_version",
-                u"requests_count_per_version",
-                u"requests_with_errors_count",
-                u"root_error_stats",
+                "cache_hits_per_version",
+                "cache_latency_count",
+                "forbidden_operation_count_per_version",
+                "latency_count",
+                "persisted_query_hits_per_version",
+                "persisted_query_misses_per_version",
+                "private_cache_ttl_count",
+                "public_cache_ttl_count",
+                "registered_operation_count_per_version",
+                "requests_count_per_version",
+                "requests_with_errors_count",
+                "root_error_stats",
             ],
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"root_error_stats", b"root_error_stats"
+                "root_error_stats", b"root_error_stats"
             ],
         ) -> bool: ...
         def ClearField(
@@ -1369,30 +1400,30 @@ class QueryLatencyStats(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"root_error_stats"]
+            self, field_name: typing_extensions___Literal["root_error_stats"]
         ) -> bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"cache_hits",
-                u"cache_latency_count",
-                u"forbidden_operation_count",
-                u"latency_count",
-                u"persisted_query_hits",
-                u"persisted_query_misses",
-                u"private_cache_ttl_count",
-                u"public_cache_ttl_count",
-                u"registered_operation_count",
-                u"request_count",
-                u"requests_with_errors_count",
-                u"root_error_stats",
+                "cache_hits",
+                "cache_latency_count",
+                "forbidden_operation_count",
+                "latency_count",
+                "persisted_query_hits",
+                "persisted_query_misses",
+                "private_cache_ttl_count",
+                "public_cache_ttl_count",
+                "registered_operation_count",
+                "request_count",
+                "requests_with_errors_count",
+                "root_error_stats",
             ],
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"root_error_stats", b"root_error_stats"
+                "root_error_stats", b"root_error_stats"
             ],
         ) -> bool: ...
         def ClearField(
@@ -1431,7 +1462,7 @@ class StatsContext(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"client_name", u"client_reference_id", u"client_version"
+                "client_name", "client_reference_id", "client_version"
             ],
         ) -> None: ...
     else:
@@ -1459,17 +1490,17 @@ class ContextualizedQueryLatencyStats(google___protobuf___message___Message):
     if sys.version_info >= (3,):
         def HasField(
             self,
-            field_name: typing_extensions___Literal[u"context", u"query_latency_stats"],
+            field_name: typing_extensions___Literal["context", "query_latency_stats"],
         ) -> bool: ...
         def ClearField(
             self,
-            field_name: typing_extensions___Literal[u"context", u"query_latency_stats"],
+            field_name: typing_extensions___Literal["context", "query_latency_stats"],
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"context", b"context", u"query_latency_stats", b"query_latency_stats"
+                "context", b"context", "query_latency_stats", b"query_latency_stats"
             ],
         ) -> bool: ...
         def ClearField(
@@ -1497,18 +1528,19 @@ class ContextualizedTypeStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     @property
     def context(self) -> StatsContext: ...
     @property
@@ -1526,14 +1558,14 @@ class ContextualizedTypeStats(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"context"]
+            self, field_name: typing_extensions___Literal["context"]
         ) -> bool: ...
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"context", u"per_type_stat"]
+            self, field_name: typing_extensions___Literal["context", "per_type_stat"]
         ) -> None: ...
     else:
         def HasField(
-            self, field_name: typing_extensions___Literal[u"context", b"context"]
+            self, field_name: typing_extensions___Literal["context", b"context"]
         ) -> bool: ...
         def ClearField(
             self, field_name: typing_extensions___Literal[b"context", b"per_type_stat"]
@@ -1565,12 +1597,12 @@ class FieldStat(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"count",
-                u"errors_count",
-                u"latency_count",
-                u"name",
-                u"requests_with_errors_count",
-                u"return_type",
+                "count",
+                "errors_count",
+                "latency_count",
+                "name",
+                "requests_with_errors_count",
+                "return_type",
             ],
         ) -> None: ...
     else:
@@ -1606,18 +1638,19 @@ class TypeStat(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     name = ...  # type: typing___Text
     @property
     def field(
@@ -1642,9 +1675,7 @@ class TypeStat(google___protobuf___message___Message):
     if sys.version_info >= (3,):
         def ClearField(
             self,
-            field_name: typing_extensions___Literal[
-                u"field", u"name", u"per_field_stat"
-            ],
+            field_name: typing_extensions___Literal["field", "name", "per_field_stat"],
         ) -> None: ...
     else:
         def ClearField(
@@ -1674,18 +1705,19 @@ class QueryStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class PerTypeStatEntry(google___protobuf___message___Message):
         key = ...  # type: typing___Text
         @property
@@ -1705,18 +1737,19 @@ class QueryStats(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     @property
     def per_client_name(
         self,
@@ -1765,11 +1798,11 @@ class QueryStats(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"per_client_name",
-                u"per_type",
-                u"per_type_stat",
-                u"query_stats_with_context",
-                u"type_stats_with_context",
+                "per_client_name",
+                "per_type",
+                "per_type_stat",
+                "query_stats_with_context",
+                "type_stats_with_context",
             ],
         ) -> None: ...
     else:
@@ -1804,14 +1837,14 @@ class TracesReport(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"header"]
+            self, field_name: typing_extensions___Literal["header"]
         ) -> bool: ...
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"header", u"trace"]
+            self, field_name: typing_extensions___Literal["header", "trace"]
         ) -> None: ...
     else:
         def HasField(
-            self, field_name: typing_extensions___Literal[u"header", b"header"]
+            self, field_name: typing_extensions___Literal["header", b"header"]
         ) -> bool: ...
         def ClearField(
             self, field_name: typing_extensions___Literal[b"header", b"trace"]
@@ -1831,7 +1864,7 @@ class Field(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"name", u"return_type"]
+            self, field_name: typing_extensions___Literal["name", "return_type"]
         ) -> None: ...
     else:
         def ClearField(
@@ -1857,7 +1890,7 @@ class Type(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"field", u"name"]
+            self, field_name: typing_extensions___Literal["field", "name"]
         ) -> None: ...
     else:
         def ClearField(
@@ -1902,19 +1935,19 @@ class MemStats(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"gc_count_delta",
-                u"gc_overhead_bytes",
-                u"gc_stw_ns_delta",
-                u"heap_allocated_bytes",
-                u"heap_allocated_bytes_delta",
-                u"heap_allocated_objects",
-                u"heap_allocated_objects_delta",
-                u"heap_bytes",
-                u"heap_freed_objects_delta",
-                u"heap_released_bytes",
-                u"stack_bytes",
-                u"stack_used_bytes",
-                u"total_bytes",
+                "gc_count_delta",
+                "gc_overhead_bytes",
+                "gc_stw_ns_delta",
+                "heap_allocated_bytes",
+                "heap_allocated_bytes_delta",
+                "heap_allocated_objects",
+                "heap_allocated_objects_delta",
+                "heap_bytes",
+                "heap_freed_objects_delta",
+                "heap_released_bytes",
+                "stack_bytes",
+                "stack_used_bytes",
+                "total_bytes",
             ],
         ) -> None: ...
     else:
@@ -1957,7 +1990,7 @@ class TimeStats(google___protobuf___message___Message):
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"real_ns_delta", u"sys_ns_delta", u"uptime_ns", u"user_ns_delta"
+                "real_ns_delta", "sys_ns_delta", "uptime_ns", "user_ns_delta"
             ],
         ) -> None: ...
     else:
@@ -1988,18 +2021,19 @@ class StatsReport(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     class LegacyPerQueryImplicitOperationNameEntry(
         google___protobuf___message___Message
     ):
@@ -2023,18 +2057,19 @@ class StatsReport(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     realtime_duration = ...  # type: int
     @property
     def header(self) -> ReportHeader: ...
@@ -2086,36 +2121,36 @@ class StatsReport(google___protobuf___message___Message):
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"end_time", u"header", u"mem_stats", u"start_time", u"time_stats"
+                "end_time", "header", "mem_stats", "start_time", "time_stats"
             ],
         ) -> bool: ...
         def ClearField(
             self,
             field_name: typing_extensions___Literal[
-                u"end_time",
-                u"header",
-                u"legacy_per_query_implicit_operation_name",
-                u"mem_stats",
-                u"per_query",
-                u"realtime_duration",
-                u"start_time",
-                u"time_stats",
-                u"type",
+                "end_time",
+                "header",
+                "legacy_per_query_implicit_operation_name",
+                "mem_stats",
+                "per_query",
+                "realtime_duration",
+                "start_time",
+                "time_stats",
+                "type",
             ],
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"end_time",
+                "end_time",
                 b"end_time",
-                u"header",
+                "header",
                 b"header",
-                u"mem_stats",
+                "mem_stats",
                 b"mem_stats",
-                u"start_time",
+                "start_time",
                 b"start_time",
-                u"time_stats",
+                "time_stats",
                 b"time_stats",
             ],
         ) -> bool: ...
@@ -2154,18 +2189,19 @@ class FullTracesReport(google___protobuf___message___Message):
         ) -> None: ...
         if sys.version_info >= (3,):
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value"]
+                self, field_name: typing_extensions___Literal["value"]
             ) -> bool: ...
             def ClearField(
-                self, field_name: typing_extensions___Literal[u"key", u"value"]
+                self, field_name: typing_extensions___Literal["key", "value"]
             ) -> None: ...
         else:
             def HasField(
-                self, field_name: typing_extensions___Literal[u"value", b"value"]
+                self, field_name: typing_extensions___Literal["value", b"value"]
             ) -> bool: ...
             def ClearField(
                 self, field_name: typing_extensions___Literal[b"key", b"value"]
             ) -> None: ...
+
     @property
     def header(self) -> ReportHeader: ...
     @property
@@ -2183,15 +2219,15 @@ class FullTracesReport(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"header"]
+            self, field_name: typing_extensions___Literal["header"]
         ) -> bool: ...
         def ClearField(
             self,
-            field_name: typing_extensions___Literal[u"header", u"traces_per_query"],
+            field_name: typing_extensions___Literal["header", "traces_per_query"],
         ) -> None: ...
     else:
         def HasField(
-            self, field_name: typing_extensions___Literal[u"header", b"header"]
+            self, field_name: typing_extensions___Literal["header", b"header"]
         ) -> bool: ...
         def ClearField(
             self,
@@ -2206,7 +2242,8 @@ class Traces(google___protobuf___message___Message):
         Trace
     ]: ...
     def __init__(
-        self, trace: typing___Optional[typing___Iterable[Trace]] = None,
+        self,
+        trace: typing___Optional[typing___Iterable[Trace]] = None,
     ) -> None: ...
     @classmethod
     def FromString(cls, s: bytes) -> Traces: ...
@@ -2214,7 +2251,7 @@ class Traces(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"trace"]
+            self, field_name: typing_extensions___Literal["trace"]
         ) -> None: ...
     else:
         def ClearField(
@@ -2237,16 +2274,16 @@ class TraceV1(google___protobuf___message___Message):
     def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
     if sys.version_info >= (3,):
         def HasField(
-            self, field_name: typing_extensions___Literal[u"header", u"trace"]
+            self, field_name: typing_extensions___Literal["header", "trace"]
         ) -> bool: ...
         def ClearField(
-            self, field_name: typing_extensions___Literal[u"header", u"trace"]
+            self, field_name: typing_extensions___Literal["header", "trace"]
         ) -> None: ...
     else:
         def HasField(
             self,
             field_name: typing_extensions___Literal[
-                u"header", b"header", u"trace", b"trace"
+                "header", b"header", "trace", b"trace"
             ],
         ) -> bool: ...
         def ClearField(
