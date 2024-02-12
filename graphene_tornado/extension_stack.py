@@ -1,6 +1,7 @@
 """
 ExtensionStack is an adapter for GraphQLExtension that helps invoke a list of GraphQLExtension objects at runtime.
 """
+
 import inspect
 from typing import Callable
 from typing import List

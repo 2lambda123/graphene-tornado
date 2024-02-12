@@ -1,6 +1,7 @@
 """
 Ported from https://github.com/apollographql/apollo-tooling/blob/master/packages/apollo-graphql/src/operationId.ts
 """
+
 from typing import Optional
 
 from graphql.language.ast import DocumentNode

@@ -18,7 +18,7 @@ from graphql import get_operation_ast
 from graphql import OperationType
 from graphql import parse
 from graphql import validate
-from graphql.error import GraphQLFormattedError  as format_graphql_error
+from graphql.error import GraphQLFormattedError as format_graphql_error
 from graphql.error.graphql_error import GraphQLError
 from graphql.error.syntax_error import GraphQLSyntaxError
 from graphql.execution.execute import ExecutionResult
@@ -296,7 +296,13 @@ class TornadoGraphQLHandler(web.RequestHandler):
 
         if validation_errors:
             await validation_ended(validation_errors)
-            return ExecutionResult(errors=validation_errors, data=None,), True
+            return (
+                ExecutionResult(
+                    errors=validation_errors,
+                    data=None,
+                ),
+                True,
+            )
         else:
             await validation_ended()
 
